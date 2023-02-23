@@ -1,0 +1,43 @@
+[PROJECT]
+Target=teclado.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.025
+Compiler=PCM
+[Target Data]
+FileList=teclado.c
+[teclado.c]
+Type=4
+[mru-list]
+1=teclado.c
+
+[ProjectLog]
+Days=2
+D1=22-02-2023
+D1_L=4
+D1_L1=[38925]Stopped Editing.
+D1_L2=[39172]Started Editing.
+D1_L3=[39621]Stopped Editing.
+TotalEdit=12
+TotalDebug=0
+D1_E=12
+D1_D=0
+D1_L4=[39621]Project Closed.
+D2=23-02-2023
+D2_L=5
+D2_L1=[36219]Project Opened.
+D2_L2=[36247]Started Editing.
+D2_L3=[36826]Stopped Editing.
+D2_L4=[37153]Started Editing.
+D2_L5=[37455]Stopped Editing.
+
+[Opened Files]
+1=..\LCD\LCD.c
+2=..\..\Prueba\Prueba.c
+3=..\Prueba2\pureba2.c
+4=..\SEMAFORO\cmaforo.c
+5=..\BCD\BCD.c
+6=teclado.c
+7=
+[Units]
+Count=1
+1=teclado (main)
