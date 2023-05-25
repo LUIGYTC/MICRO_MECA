@@ -1,4 +1,0 @@
->>> Warning 205 "servo.c" Line 38(1,1): Unsigned variable is never less than zero
-      Memory usage:   ROM=19%      RAM=3% - 12%
-      0 Errors,  1 Warnings.
-Build Successful.

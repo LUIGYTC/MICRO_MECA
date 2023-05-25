@@ -82,7 +82,7 @@ int1 rigth(){
    for(int16 i = 0; i < pasos_a_recorrer; i++){
          incrementIndex();
          updatePort();
-         delay_ms(100);
+         delay_ms(50);
          origen=i;
          if(input(boton_paro)){
          paro_emergencia();
@@ -98,7 +98,7 @@ int1 left(){
    for(int16 i = 0; i < pasos_a_recorrer; i++){
          decrementIndex();
          updatePort();
-         delay_ms(100);
+         delay_ms(50);
          origen=i;
          if(input(boton_paro)){
          paro_emergencia();

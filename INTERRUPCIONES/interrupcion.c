@@ -32,6 +32,6 @@ void main()
       lcd_gotoxy(1,1);
       printf(lcd_putc,"Num:%3u",cont);
       cont++;
-      delay_ms(1000);
+      delay_ms(5000);
     }
 }

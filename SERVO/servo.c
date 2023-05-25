@@ -3,19 +3,19 @@
 #use delay(crystal = 20000000)
 #FUSES NOWDT, NOBROWNOUT, NOLVP, HS
 
-#include <lcd_c.c>
-#include <kbd4x4_d.c>
-#include <getNum16.c>
+#include <lcd_c.c> //Incluir librería LCD
+#include <kbd4x4_d.c> //Librería teclado 4x4 puerto B
+#include <getNum16.c> //Librería para leer numeros enteros de 16 bits
 
 #use STANDARD_IO(E)
 
-#define PWM_SERVO PIN_E2
+#define PWM_SERVO PIN_E0
 
 int16 grado;
 
 void mover_servo(int16 grados){
    // Calcular tiempo en alto (1m a 2m)
-   int16 t_alto = ((float)grados * (float)grados) * 0.0332 + (8.5835* (float)grados) + 435.82;
+   int16 t_alto = ( 11.275*grados) + 654.89;
    
    // Periodo de 20ms
    int16 t_bajo = 20000.0 - t_alto;
@@ -46,9 +46,6 @@ int1 condicion;
 
 void main()
 {
-   
-   // Inicializar pines
-   //port_b_pullups(1);
    lcd_init();
    kbd_init();
    
