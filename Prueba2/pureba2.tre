@@ -1,0 +1,48 @@
+ÀÄpureba2
+   ÀÄMAIN  0/439  Ram=8
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@PSTRINGC7_9600_62_63  0/90  Ram=4
+      ÃÄ@ITOF  0/29  Ram=2
+      ÃÄ@ITOF  0/29  Ram=2
+      ÃÄsumar  0/37  Ram=12
+      ³  ÀÄ@ADDFF  0/321  Ram=16
+      ÃÄ@ITOF  0/29  Ram=2
+      ÃÄ@ITOF  0/29  Ram=2
+      ÃÄrestar  0/37  Ram=12
+      ³  ÀÄ@ADDFF  0/321  Ram=16
+      ÃÄ@ITOF  0/29  Ram=2
+      ÃÄ@ITOF  0/29  Ram=2
+      ÃÄdividir  0/236  Ram=12
+      ³  ÀÄ@DIVFF  (Inline)  Ram=14
+      ÃÄ@ITOF  0/29  Ram=2
+      ÃÄ@ITOF  0/29  Ram=2
+      ÃÄmultiplicar  0/36  Ram=12
+      ³  ÀÄ@MULFF  0/117  Ram=13
+      ÃÄ@PRINTF_U_9600_62_63  0/56  Ram=2
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÀÄ@DIV88  0/21  Ram=3
+      ÃÄ@PRINTF_U_9600_62_63  0/56  Ram=2
+      ³  ÀÄ*
+      ÃÄ@PRINTF_L32D_9600_62_63FPFPF  0/228  Ram=13
+      ³  ÃÄ@MULFF  0/117  Ram=13
+      ³  ÃÄ@FTOSD  (Inline)  Ram=5
+      ³  ÃÄ@DIV3232  0/79  Ram=13
+      ³  ÀÄ@DIV3232  0/79  Ram=13
+      ÃÄ@PRINTF_U_9600_62_63  0/56  Ram=2
+      ³  ÀÄ*
+      ÃÄ@PRINTF_U_9600_62_63  0/56  Ram=2
+      ³  ÀÄ*
+      ÃÄ@PRINTF_L32D_9600_62_63FPFPF  0/228  Ram=13
+      ³  ÀÄ*
+      ÃÄ@PRINTF_U_9600_62_63  0/56  Ram=2
+      ³  ÀÄ*
+      ÃÄ@PRINTF_U_9600_62_63  0/56  Ram=2
+      ³  ÀÄ*
+      ÃÄ@PRINTF_L32D_9600_62_63FPFPF  0/228  Ram=13
+      ³  ÀÄ*
+      ÃÄ@PRINTF_U_9600_62_63  0/56  Ram=2
+      ³  ÀÄ*
+      ÃÄ@PRINTF_U_9600_62_63  0/56  Ram=2
+      ³  ÀÄ*
+      ÀÄ@PRINTF_L32D_9600_62_63FPFPF  0/228  Ram=13
+         ÀÄ*

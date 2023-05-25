@@ -1,0 +1,96 @@
+[PROJECT]
+Target=PRACT2.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.025
+Compiler=PCM
+[Target Data]
+FileList=PRACT2.c
+[PRACT2.c]
+Type=4
+[mru-list]
+1=PRACT2.c
+
+[Opened Files]
+1=..\PRACTICA3\PRACTICA3.c
+2=
+3=..\Prueba2\pureba2.c
+4=..\SEMAFORO\cmaforo.c
+5=..\BCD\BCD.c
+6=..\TECLADO\teclado.c
+7=PRACT2.c
+8=
+
+[ProjectLog]
+Days=5
+D1=24-02-2023
+D1_L=31
+D1_L1=[1303]Stopped Editing.
+D1_L2=[26548]Started Editing.
+D1_L3=[26854]Stopped Editing.
+D1_L4=[27185]Started Editing.
+D1_L5=[28819]Stopped Editing.
+TotalEdit=358
+TotalDebug=0
+D1_E=105
+D1_D=0
+D1_L6=[28819]Project Closed.
+D1_L7=[28840]Project Opened.
+D1_L8=[28879]Started Editing.
+D1_L9=[31423]Stopped Editing.
+D1_L10=[31833]Project Closed.
+D1_L11=[36406]Project Opened.
+D1_L12=[36484]Started Editing.
+D1_L13=[36877]Stopped Editing.
+D1_L14=[38043]Started Editing.
+D1_L15=[38481]Stopped Editing.
+D1_L16=[38496]Started Editing.
+D1_L17=[38882]Stopped Editing.
+D1_L18=[38992]Started Editing.
+D1_L19=[39434]Stopped Editing.
+D1_L20=[39434]Project Closed.
+D1_L21=[42820]Project Opened.
+D1_L22=[42841]Started Editing.
+D1_L23=[54154]Stopped Editing.
+D1_L24=[68825]Started Editing.
+D1_L25=[69264]Stopped Editing.
+D1_L26=[77286]Started Editing.
+D1_L27=[78081]Stopped Editing.
+D1_L28=[80891]Started Editing.
+D1_L29=[81985]Stopped Editing.
+D1_L30=[82226]Started Editing.
+D1_L31=[82697]Stopped Editing.
+D2=25-02-2023
+D2_E=211
+D2_D=0
+D2_L=1
+D2_L1=[67711]Project Closed.
+D3=27-02-2023
+D3_L=6
+D3_L1=[37146]Project Opened.
+D3_L2=[48185]Started Editing.
+D3_L3=[48560]Stopped Editing.
+D3_L4=[48707]Started Editing.
+D3_L5=[50873]Stopped Editing.
+D3_E=38
+D3_D=0
+D3_L6=[50873]Project Closed.
+D4=28-02-2023
+D4_L=3
+D4_L1=[36956]Project Opened.
+D4_L2=[37025]Started Editing.
+D4_L3=[37325]Stopped Editing.
+D5=01-03-2023
+D5_E=4
+D5_D=0
+D5_L=8
+D5_L1=[28554]Project Closed.
+D5_L2=[39256]Project Opened.
+D5_L3=[39341]Started Editing.
+D5_L4=[39516]Stopped Editing.
+D5_L5=[39516]Project Closed.
+D5_L6=[40051]Project Opened.
+D5_L7=[40100]Started Editing.
+D5_L8=[40872]Project Closed.
+[Units]
+Count=1
+1=PRACT2 (main)

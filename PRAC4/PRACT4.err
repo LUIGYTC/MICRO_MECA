@@ -1,0 +1,4 @@
+>>> Warning 202 "PRACT4.c" Line 34(9,10): Variable never used:   c
+      Memory usage:   ROM=24%      RAM=6% - 15%
+      0 Errors,  1 Warnings.
+Build Successful.

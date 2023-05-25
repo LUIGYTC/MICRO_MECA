@@ -1,0 +1,65 @@
+[PROJECT]
+Target=practica4.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.025
+Compiler=PCM
+[Target Data]
+FileList=practica4.c
+[practica4.c]
+Type=4
+[mru-list]
+1=practica4.c
+
+[Opened Files]
+1=..\PRACTICA3\PRACTICA3.c
+2=..\PRAC4\PRACT4.c
+3=practica4.c
+4=
+
+[ProjectLog]
+Days=2
+D1=13-03-2023
+D1_L=15
+D1_L1=[74914]Stopped Editing.
+D1_L2=[75088]Started Editing.
+D1_L3=[75401]Stopped Editing.
+D1_L4=[75418]Started Editing.
+D1_L5=[75757]Stopped Editing.
+D1_L6=[75944]Started Editing.
+D1_L7=[76244]Stopped Editing.
+D1_L8=[76471]Started Editing.
+D1_L9=[77538]Stopped Editing.
+D1_L10=[77620]Started Editing.
+D1_L11=[78081]Stopped Editing.
+D1_L12=[80532]Started Editing.
+D1_L13=[80832]Stopped Editing.
+D1_L14=[83658]Started Editing.
+D1_L15=[84202]Stopped Editing.
+D2=14-03-2023
+D2_L=19
+D2_L1=[5656]Started Editing.
+D2_L2=[6006]Stopped Editing.
+D2_L3=[6667]Started Editing.
+D2_L4=[6968]Stopped Editing.
+D2_L5=[7219]Started Editing.
+D2_L6=[7991]Stopped Editing.
+D2_L7=[8050]Started Editing.
+D2_L8=[8361]Stopped Editing.
+D2_L9=[8896]Started Editing.
+D2_L10=[9731]Stopped Editing.
+D2_L11=[9803]Started Editing.
+D2_L12=[11645]Stopped Editing.
+D2_L13=[11917]Started Editing.
+D2_L14=[12526]Stopped Editing.
+D2_L15=[13230]Started Editing.
+D2_L16=[15811]Stopped Editing.
+D2_L17=[25518]Started Editing.
+D2_L18=[27662]Stopped Editing.
+TotalEdit=171
+TotalDebug=0
+D2_E=171
+D2_D=0
+D2_L19=[27662]Project Closed.
+[Units]
+Count=1
+1=practica4 (main)

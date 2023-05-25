@@ -1,0 +1,41 @@
+[PROJECT]
+Target=BCD.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.025
+Compiler=PCM
+[Target Data]
+FileList=BCD.c
+[BCD.c]
+Type=4
+[mru-list]
+1=BCD.c
+
+[ProjectLog]
+Days=1
+D1=16-02-2023
+D1_L=11
+D1_L1=[38677]Started Editing.
+D1_L2=[39511]Stopped Editing.
+TotalEdit=24
+TotalDebug=0
+D1_E=24
+D1_D=0
+D1_L3=[39511]Project Closed.
+D1_L4=[60122]Project Opened.
+D1_L5=[60253]Started Editing.
+D1_L6=[60554]Stopped Editing.
+D1_L7=[61156]Started Editing.
+D1_L8=[61992]Stopped Editing.
+D1_L9=[71931]Started Editing.
+D1_L10=[71984]Stopped Editing.
+D1_L11=[71984]Project Closed.
+
+[Opened Files]
+1=..\..\Prueba\Prueba.c
+2=..\Prueba2\pureba2.c
+3=..\SEMAFORO\cmaforo.c
+4=BCD.c
+5=
+[Units]
+Count=1
+1=BCD (main)

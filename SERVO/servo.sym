@@ -1,0 +1,173 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+007     lcd
+007     lcdlat
+008     kbd
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     kbd_getc.kbd_call_count
+021.0   kbd_getc.kbd_down
+022     kbd_getc.last_key
+023     kbd_getc.col
+024-025 grado
+026-027 mover_servo.grados
+026     lcd_init.i
+026.0   PreguntarDato.condicion
+026     MAIN.@SCRATCH1
+027     get_num_lcd.x
+027     lcd_init.@SCRATCH1
+027     PreguntarDato.@SCRATCH1
+028     get_num_lcd.y
+028-029 mover_servo.t_alto
+029-02A get_num_lcd.numero
+02A-02B mover_servo.t_bajo
+02B-02F get_num_lcd.cadena
+02C     mover_servo.i
+02D-030 @SFTOI.P1
+02D     mover_servo.@SCRATCH1
+02E     @delay_us1.P1
+02E     mover_servo.@SCRATCH2
+02F     mover_servo.@SCRATCH3
+030     get_num_lcd.index
+030     mover_servo.@SCRATCH4
+031-034 @MULFF.P1
+031     get_num_lcd.tecla
+031-034 @ADDFF.P1
+031-032 @ITOF.P2
+032     get_num_lcd.i
+033     read_key.c
+033     get_num_lcd.@SCRATCH1
+033     @PSTRINGC7_649.@SCRATCH1
+034     kbd_getc.kchar
+034     get_num_lcd.@SCRATCH2
+034     @PSTRINGC7_649.@SCRATCH2
+035     pow.base
+035     kbd_getc.row
+035-038 @ADDFF.P1
+035-038 @MULFF.P2
+035     get_num_lcd.@SCRATCH3
+035     @PSTRINGC7_649.@SCRATCH3
+036     pow.power
+036     lcd_putc.c
+036     kbd_getc.@SCRATCH1
+036     @PSTRINGC7_649.@SCRATCH4
+037-03A pow.result
+037     lcd_gotoxy.x
+037     @delay_ms1.P1
+038     lcd_gotoxy.y
+039     lcd_gotoxy.address
+039     @MULFF.@SCRATCH1
+039     @ADDFF.@SCRATCH1
+03A     lcd_gotoxy.@SCRATCH1
+03A     @MULFF.@SCRATCH2
+03A     @ADDFF.@SCRATCH2
+03B     lcd_send_byte.address
+03B     pow.i
+03B     @MULFF.@SCRATCH3
+03B     @ADDFF.@SCRATCH3
+03C     lcd_send_byte.n
+03C-03F @MUL3232.P1
+03C     @MULFF.@SCRATCH4
+03C     @ADDFF.@SCRATCH4
+03D     lcd_read_byte.low
+03D     lcd_send_byte.@SCRATCH1
+03D     @MULFF.@SCRATCH5
+03D     @ADDFF.@SCRATCH5
+03E     lcd_read_byte.high
+03E     lcd_send_nibble.n
+03E     @ADDFF.@SCRATCH6
+03F     lcd_read_byte.@SCRATCH1
+03F     @ADDFF.@SCRATCH7
+040-043 @MUL3232.P1
+040     @ADDFF.@SCRATCH8
+044     @MUL3232.@SCRATCH1
+045     @MUL3232.@SCRATCH2
+046     @MUL3232.@SCRATCH3
+047     @MUL3232.@SCRATCH4
+048     @MUL3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+087     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  LCD_INIT_STRING.call
+000008  LCD_INIT_STRING.data
+00000C  KEYS.call
+000010  KEYS.data
+000020  @const688.call
+000023  @const716.call
+00002C  @const717.call
+000032  @delay_ms1
+000046  lcd_send_nibble
+000057  lcd_read_nibble
+00005D  lcd_send_byte
+00005E  lcd_read_byte
+00009A  lcd_init
+0000CA  kbd_init
+0000CD  @ITOF
+0000EA  @MULFF
+00015F  @ADDFF
+0002A0  @SFTOI
+0002BF  @delay_us1
+0002CE  mover_servo
+0003AE  lcd_gotoxy
+0003C0  lcd_putc
+0003E4  @PSTRINGC7_649
+00043A  kbd_getc
+0004A3  @goto10645
+0004AB  @MUL3232
+0004D5  PreguntarDato
+0004E0  get_num_lcd
+0004ED  read_key
+000566  pow
+0005CF  @cinit1
+0005CF  MAIN
+0005D9  @cinit2
+
+Project Directory:
+    C:\Users\luist\OneDrive\Escritorio\8VO\MICRO\PROGRAMAS\SERVO\
+
+Project Files:
+    servo.c                                                 [22-mar.-23 10:59  CRC=D10E99F9]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877a.h [18-abr.-14 16:56  CRC=4F277C97]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd_c.c [21-feb.-23 10:21  CRC=B171009B]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\kbd4x4_d.c [17-mar.-23 10:59  CRC=6CBC6270]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\getNum16.c [22-feb.-23 10:42  CRC=EEBE17EA]
+
+Source signature=1BDFA96F
+
+Units:
+    servo (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   servo.xsym
+    Errors:      servo.err
+    Ext Symbols: servo.esym
+    INHX8:       servo.hex
+    Symbols:     servo.sym
+    List:        servo.lst
+    Debug/COFF:  servo.cof
+    Project:     servo.ccspjt
+    Call Tree:   servo.tre
+    Statistics:  servo.STA

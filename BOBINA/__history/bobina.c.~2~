@@ -1,0 +1,55 @@
+#include <16F877a.h>
+#device ADC=10
+#use delay(crystal=20000000)
+#FUSES NOWDT, NOBROWNOUT, NOLVP
+
+#include <lcd_c.c> //Incluir librería LCD
+#include <kbd4x4_b.c> //Librería teclado 4x4 puerto B
+#include <getNum16.c> //Librería para leer numeros enteros de 16 bits
+
+#USE STANDARD_IO(D)
+#USE STANDARD_IO(A)
+
+#define boton_paro PIN_E2
+
+int8 pasosbi[8] = {
+   0b1000,
+   0b1010,
+   0b0010,
+   0b0110,
+   0b0100,
+   0b0101,
+   0b0001,
+   0b1001
+};
+float pasoanterior=0;
+int8 index = 0;
+float grados;
+int16 pasos_a_recorrer;
+int16 origen;
+
+void updatePort(){
+   output_d(pasosbi[index]);
+}
+
+void incrementIndex(){
+   if(index == 3){
+      index = 0;
+   }else{
+      index++;
+   }
+}
+
+void main(){
+   port_b_pullups(1);
+   kbd_init(); //Inicializar teclado
+   lcd_init(); //Inicializar pantalla
+   
+   updatePort();
+   delay_ms(50);
+   
+   while(TRUE){
+      incrementIndex(1000);
+   }
+      
+}

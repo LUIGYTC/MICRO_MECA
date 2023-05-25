@@ -1,0 +1,56 @@
+#include <16F877a.h>
+#device ADC = 10
+#use delay(crystal = 20000000)
+#FUSES NOWDT, NOBROWNOUT, NOLVP
+
+//Directiva para utilizar puerto USART
+#use rs232(BAUD=9600, XMIT = PIN_C6, RCV=PIN_C7)
+
+int8 sumar(int8 a, int8 b)
+{
+   int8 resultado = a + b;
+   return resultado;
+}
+int8 restar(int8 a, int8 b)
+{
+   int8 resultado = a - b;
+   return resultado;
+}
+int8 dividir(int8 a, int8 b)
+{
+   int8 resultado = a / b;
+   return resultado;
+}
+int8 multiplicar(int8 a, int8 b)
+{
+   int8 resultado = a * b;
+   return resultado;
+}
+
+void main()
+{
+   setup_uart(9600); //Configurar baudios
+   
+   printf("Hola mundo\n\r");
+   
+   int8 num1 = 2;
+   int8 num2 = 3;
+   int8 sum;
+   int8 res;
+   int8 div;
+   int8 mul;
+   
+   sum = sumar(num1,num2);
+   res = restar(num1,num2);
+   div = dividir(num1,num2);
+   mul = multiplicar(num1,num2);
+   
+   printf("%u + %u: %u\n\r",num1,num2,sum);
+   printf("%u - %u: %u\n\r",num1,num2,res);
+   printf("%u / %u: %u\n\r",num1,num2,div);
+   printf("%u * %u: %u\n\r",num1,num2,mul);
+   while (1)
+    {
+    
+    }
+}

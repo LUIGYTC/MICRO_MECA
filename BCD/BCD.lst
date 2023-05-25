@@ -1,0 +1,195 @@
+CCS PCM C Compiler, Version 5.025, 63300               16-feb.-23 19:58
+
+               Filename:   C:\Users\luist\OneDrive\Escritorio\8VO\MICRO\PROGRAMAS\BCD\BCD.lst
+
+               ROM used:   97 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   24 (7%) at main() level
+                           24 (7%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   004
+0003:  NOP
+.................... #include <16F877a.h> 
+.................... //////////// Standard Header file for the PIC16F877A device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2013 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F877A 
+....................  
+.................... #list 
+....................  
+.................... #device ADC = 10 
+.................... #use delay(crystal = 20000000) 
+.................... #FUSES NOWDT, NOBROWNOUT, NOLVP, HS 
+....................  
+.................... //Directiva para utilizar puerto USART 
+.................... #use rs232(BAUD=9600, XMIT = PIN_C6, RCV=PIN_C7) 
+....................  
+.................... #use STANDARD_IO(B) 
+.................... #use STANDARD_IO(A) 
+....................  
+.................... #define SUMAR PIN_A0 
+.................... #define RESTAR PIN_A1 
+....................  
+.................... int8 bandera=0; 
+.................... int8 i=0; 
+....................  
+.................... // Se define el array con todas las combinaciones del display 
+.................... int8 numeros[] = { 
+....................    //-gfedcba 
+....................    0b00111111, // 0 
+....................    0b00000110, // 1 
+....................    0b01011011, // 2 
+....................    0b01001111, // 3 
+....................    0b01100110, // 4 
+....................    0b01101101, // 5 
+....................    0b01111101, // 6 
+....................    0b00000111, // 7 
+....................    0b01111111, // 8 
+....................    0b01101111, // 9 
+....................    0b01110111, // A 
+....................    0b01111100, // B 
+....................    0b00111001, // C 
+....................    0b01011110, // D 
+....................    0b01111001, // E 
+....................    0b01110001, // F 
+.................... }; 
+*
+0019:  MOVLW  3F
+001A:  BCF    03.5
+001B:  MOVWF  22
+001C:  MOVLW  06
+001D:  MOVWF  23
+001E:  MOVLW  5B
+001F:  MOVWF  24
+0020:  MOVLW  4F
+0021:  MOVWF  25
+0022:  MOVLW  66
+0023:  MOVWF  26
+0024:  MOVLW  6D
+0025:  MOVWF  27
+0026:  MOVLW  7D
+0027:  MOVWF  28
+0028:  MOVLW  07
+0029:  MOVWF  29
+002A:  MOVLW  7F
+002B:  MOVWF  2A
+002C:  MOVLW  6F
+002D:  MOVWF  2B
+002E:  MOVLW  77
+002F:  MOVWF  2C
+0030:  MOVLW  7C
+0031:  MOVWF  2D
+0032:  MOVLW  39
+0033:  MOVWF  2E
+0034:  MOVLW  5E
+0035:  MOVWF  2F
+0036:  MOVLW  79
+0037:  MOVWF  30
+0038:  MOVLW  71
+0039:  MOVWF  31
+....................  
+....................  
+.................... void main() 
+*
+0004:  MOVF   03,W
+0005:  ANDLW  1F
+0006:  MOVWF  03
+0007:  MOVLW  81
+0008:  BSF    03.5
+0009:  MOVWF  19
+000A:  MOVLW  A6
+000B:  MOVWF  18
+000C:  MOVLW  90
+000D:  BCF    03.5
+000E:  MOVWF  18
+000F:  CLRF   20
+0010:  CLRF   21
+0011:  BSF    03.5
+0012:  BSF    1F.0
+0013:  BSF    1F.1
+0014:  BSF    1F.2
+0015:  BCF    1F.3
+0016:  MOVLW  07
+0017:  MOVWF  1C
+0018:  BCF    03.7
+.................... { 
+....................    setup_uart(9600); //Configurar baudios 
+*
+003A:  MOVLW  81
+003B:  BSF    03.5
+003C:  MOVWF  19
+003D:  MOVLW  A6
+003E:  MOVWF  18
+003F:  MOVLW  90
+0040:  BCF    03.5
+0041:  MOVWF  18
+....................    // Inicializar pines 
+....................    output_b(0); 
+0042:  BSF    03.5
+0043:  CLRF   06
+0044:  BCF    03.5
+0045:  CLRF   06
+....................    input(SUMAR); 
+0046:  BSF    03.5
+0047:  BSF    05.0
+....................    input(RESTAR); 
+0048:  BSF    05.1
+....................     
+....................    while (1) 
+....................     { 
+....................       // Recorrer vector numeros 
+....................     if(input(SUMAR)==1 && bandera==0) 
+0049:  BSF    05.0
+004A:  BCF    03.5
+004B:  BTFSS  05.0
+004C:  GOTO   05D
+004D:  MOVF   20,F
+004E:  BTFSS  03.2
+004F:  GOTO   05D
+....................       { 
+....................          output_b(numeros[i]); 
+0050:  MOVLW  22
+0051:  ADDWF  21,W
+0052:  MOVWF  04
+0053:  BCF    03.7
+0054:  MOVF   00,W
+0055:  MOVWF  32
+0056:  BSF    03.5
+0057:  CLRF   06
+0058:  BCF    03.5
+0059:  MOVF   32,W
+005A:  MOVWF  06
+....................          i++; 
+005B:  INCF   21,F
+....................       } 
+005C:  GOTO   05E
+....................      else 
+....................      { 
+....................          bandera=0; 
+005D:  CLRF   20
+....................      } 
+005E:  BSF    03.5
+005F:  GOTO   049
+....................      /* for(int8 i = 0; i < sizeof(numeros); i++) 
+....................       { 
+....................          output_b(numeros[i]); // Colocar el número en el puerto B 
+....................          delay_ms(500); // Esperar 
+....................       }*/ 
+....................     } 
+.................... } 
+0060:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F32   HS NOWDT PUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

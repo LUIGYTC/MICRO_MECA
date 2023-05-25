@@ -1,0 +1,78 @@
+ÀÄservo
+   ÀÄMAIN  0/40  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄlcd_init  0/48  Ram=2
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄlcd_send_nibble  0/17  Ram=1
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÃÄlcd_send_nibble  0/17  Ram=1
+      ³  ÃÄ@const631  0/8  Ram=0
+      ³  ÀÄlcd_send_byte  0/61  Ram=3
+      ³     ÃÄlcd_read_byte  (Inline)  Ram=3
+      ³     ³  ÃÄlcd_read_nibble  0/6  Ram=0
+      ³     ³  ÀÄlcd_read_nibble  0/6  Ram=0
+      ³     ÃÄlcd_send_nibble  0/17  Ram=1
+      ³     ÀÄlcd_send_nibble  0/17  Ram=1
+      ÃÄkbd_init  0/3  Ram=0
+      ÃÄmover_servo  0/224  Ram=10
+      ³  ÃÄ@ITOF  0/29  Ram=2
+      ³  ÃÄ@ITOF  0/29  Ram=2
+      ³  ÃÄ@MULFF  0/117  Ram=13
+      ³  ÃÄ@MULFF  0/117  Ram=13
+      ³  ÃÄ@ITOF  0/29  Ram=2
+      ³  ÃÄ@MULFF  0/117  Ram=13
+      ³  ÃÄ@ADDFF  0/321  Ram=16
+      ³  ÃÄ@ADDFF  0/321  Ram=16
+      ³  ÃÄ@SFTOI  0/31  Ram=4
+      ³  ÃÄ@ITOF  0/29  Ram=2
+      ³  ÃÄ@ADDFF  0/321  Ram=16
+      ³  ÃÄ@SFTOI  0/31  Ram=4
+      ³  ÃÄ@delay_us1  0/15  Ram=1
+      ³  ÃÄ@delay_us1  0/15  Ram=1
+      ³  ÃÄ@delay_us1  0/15  Ram=1
+      ³  ÀÄ@delay_us1  0/15  Ram=1
+      ÃÄPreguntarDato  0/250  Ram=2
+      ³  ÃÄ@PSTRINGC7_649  0/86  Ram=4
+      ³  ³  ÃÄlcd_putc  0/36  Ram=1
+      ³  ³  ³  ÃÄlcd_send_byte  0/61  Ram=3
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ³  ³  ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ³  ³  ³  ÀÄlcd_send_byte  0/61  Ram=3
+      ³  ³  ³  ³     ÀÄ*
+      ³  ³  ³  ÃÄlcd_send_byte  0/61  Ram=3
+      ³  ³  ³  ³  ÀÄ*
+      ³  ³  ³  ÀÄlcd_send_byte  0/61  Ram=3
+      ³  ³  ³     ÀÄ*
+      ³  ³  ÀÄlcd_putc  0/36  Ram=1
+      ³  ³     ÀÄ*
+      ³  ÃÄget_num_lcd  (Inline)  Ram=5
+      ³  ³  ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄread_key  (Inline)  Ram=1
+      ³  ³  ³  ÀÄkbd_getc  0/105  Ram=3
+      ³  ³  ³     ÃÄ@goto10645  0/8  Ram=0
+      ³  ³  ³     ÀÄ@const656  0/20  Ram=0
+      ³  ³  ÃÄlcd_putc  0/36  Ram=1
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄlcd_putc  0/36  Ram=1
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄ@PSTRINGC7_649  0/86  Ram=4
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄpow  (Inline)  Ram=6
+      ³  ³  ³  ÀÄ@MUL3232  0/42  Ram=13
+      ³  ³  ÀÄ@MUL3232  0/42  Ram=13
+      ³  ÃÄ@PSTRINGC7_649  0/86  Ram=4
+      ³  ³  ÀÄ*
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄmover_servo  0/224  Ram=10
+      ³  ÀÄ*
+      ÀÄ@delay_ms1  0/20  Ram=1

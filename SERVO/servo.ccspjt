@@ -1,0 +1,94 @@
+[PROJECT]
+Target=servo.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.025
+Compiler=PCM
+[Target Data]
+FileList=servo.c
+[servo.c]
+Type=4
+[mru-list]
+1=servo.c
+
+[ProjectLog]
+Days=6
+D1=16-03-2023
+D1_L=4
+D1_L1=[65303]Started Editing.
+D1_L2=[66756]Stopped Editing.
+D1_L3=[67059]Started Editing.
+D1_L4=[67710]Stopped Editing.
+D2=17-03-2023
+D2_L=5
+D2_L1=[26246]Started Editing.
+D2_L2=[39200]Project Opened.
+D2_L3=[39337]Started Editing.
+D2_L4=[39924]Stopped Editing.
+TotalEdit=62
+TotalDebug=0
+D2_E=5
+D2_D=0
+D2_L5=[42222]Project Closed.
+D3=20-03-2023
+D3_L=18
+D3_L1=[49176]Project Opened.
+D3_L2=[49573]Started Editing.
+D3_L3=[49612]Project Closed.
+D3_L4=[50584]Project Opened.
+D3_L5=[51135]Started Editing.
+D3_L6=[51435]Stopped Editing.
+D3_L7=[53561]Started Editing.
+D3_L8=[53646]Stopped Editing.
+D3_E=12
+D3_D=0
+D3_L9=[53646]Project Closed.
+D3_L10=[57502]Project Opened.
+D3_L11=[57700]Started Editing.
+D3_L12=[58549]Stopped Editing.
+D3_L13=[58584]Started Editing.
+D3_L14=[58598]Stopped Editing.
+D3_L15=[58598]Project Closed.
+D3_L16=[60507]Project Opened.
+D3_L17=[60892]Started Editing.
+D3_L18=[61454]Stopped Editing.
+D4=21-03-2023
+D4_L=6
+D4_L1=[37962]Started Editing.
+D4_L2=[38323]Stopped Editing.
+D4_E=11
+D4_D=0
+D4_L3=[38323]Project Closed.
+D4_L4=[39010]Project Opened.
+D4_L5=[39025]Started Editing.
+D4_L6=[39863]Stopped Editing.
+D5=22-03-2023
+D5_L=8
+D5_L1=[34546]Project Opened.
+D5_L2=[34555]Started Editing.
+D5_L3=[35100]Stopped Editing.
+D5_E=34
+D5_D=0
+D5_L4=[35100]Project Closed.
+D5_L5=[35730]Project Opened.
+D5_L6=[38337]Started Editing.
+D5_L7=[39726]Stopped Editing.
+D5_L8=[39726]Project Closed.
+D6=23-03-2023
+D6_L=3
+D6_L1=[35753]Project Opened.
+D6_L2=[35821]Started Editing.
+D6_L3=[35992]Project Closed.
+
+[Opened Files]
+1=..\PRACTICA3\PRACTICA3.c
+2=..\PRAC4\PRACT4.c
+3=..\PRACTICA4\practica4.c
+4=..\BOBINA\bobina.c
+5=servo.c
+6=..\..\..\..\..\..\Downloads\kbd4x4_b (2).c
+7=..\LINEALIZARSERVO\ls.c
+8=..\INTERRUPCIONES\interrupcion.c
+9=
+[Units]
+Count=1
+1=servo (main)

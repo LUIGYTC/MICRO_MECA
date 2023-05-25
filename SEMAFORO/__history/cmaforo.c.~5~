@@ -1,0 +1,94 @@
+#include <16F877a.h>
+
+#device ADC = 10
+
+#use delay(crystal = 20000000)
+
+#FUSES NOWDT, NOBROWNOUT, NOLVP
+
+
+
+
+//Directiva para utilizar puerto USART
+
+#use rs232(BAUD=9600, XMIT = PIN_C6, RCV=PIN_C7)
+
+
+
+
+#use STANDARD_IO(B)
+
+
+
+
+#define ENTRADAA PIN_B0
+
+#define SALIDAA PIN_B1
+
+#define SALIDAB PIN_B2
+
+#define SALIDAC PIN_B3
+
+void verde(int8 seg)
+   {
+      for(int8 i=0; i<seg;i++)
+      {
+         
+      }
+   }
+void parpadear(int8 parpadeos)
+
+{
+
+   for(int8 i = 0; i < parpadeos; i++)
+
+   {
+      while(1)
+      output_high(SALIDAB);
+
+      delay_ms(500);
+
+      output_low(SALIDAB);
+
+      delay_ms(500);
+
+   }
+
+}
+
+
+
+
+void main()
+
+{
+
+   setup_uart(9600); //Configurar baudios
+
+   // Inicializar pines
+
+   output_low(SALIDAA);
+
+   input(BOTONA);
+
+   input(BOTONB);
+
+   while (1)
+
+    {
+
+      if(input(BOTONA) == 1 && input(BOTONB) == 1)
+
+      {
+
+         parpadear(3);
+
+      } else {
+
+         output_low(SALIDA);
+
+      }
+
+    }
+
+}

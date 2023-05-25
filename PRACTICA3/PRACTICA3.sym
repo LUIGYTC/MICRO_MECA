@@ -1,0 +1,213 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+006     kbd
+007     lcd
+007     lcdlat
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     kbd_getc.kbd_call_count
+021.0   kbd_getc.kbd_down
+021.1   bandera
+022     kbd_getc.last_key
+023     kbd_getc.col
+024-025 veces
+026-027 dato
+028-029 seg
+02A-02B rep
+02C-02D segundos
+02E-02F NIteraciones
+030     rutina_105.veces
+030.0   PreguntarSegundos.condicion
+030.0   PreguntarIteraciones.condicion
+030     rutina_210.veces
+030     lcd_init.i
+030.0   PreguntarDato.condicion
+030     rutina_315.veces
+030     rutina_420.veces
+031     rutina_315.i
+031     rutina_420.i
+031     get_num_lcd.x
+031     rutina_105.i
+031     rutina_210.i
+031     lcd_init.@SCRATCH1
+031     PreguntarDato.@SCRATCH1
+031     PreguntarSegundos.@SCRATCH1
+031     PreguntarIteraciones.@SCRATCH1
+032     get_num_lcd.y
+032-033 delay_paro.segundos
+032     rutina_105.@SCRATCH1
+032     rutina_210.@SCRATCH1
+032     rutina_315.@SCRATCH1
+032     rutina_420.@SCRATCH1
+033-034 get_num_lcd.numero
+034-035 delay_paro.i
+035-039 get_num_lcd.cadena
+036     @PSTRINGCN7_649.P1
+036     paro_emergencia.c
+036-037 @DIV1616.P1
+036-037 @MUL1616.P2
+036-037 @PRINTF_LU_649.P3
+036     delay_paro.@SCRATCH1
+037     paro_emergencia.i
+037     delay_paro.@SCRATCH2
+037     @PSTRINGCN7_649.@SCRATCH1
+038-039 @MUL1616.P1
+038-039 @DIV1616.P2
+038     paro_emergencia.@SCRATCH1
+038     @PSTRINGCN7_649.@SCRATCH2
+038     @PRINTF_LU_649.@SCRATCH1
+039     @PSTRINGCN7_649.@SCRATCH3
+039     @PRINTF_LU_649.@SCRATCH2
+03A     get_num_lcd.index
+03A     @MUL1616.@SCRATCH1
+03A     @DIV1616.@SCRATCH1
+03A     @PSTRINGCN7_649.@SCRATCH4
+03A     @PRINTF_LU_649.@SCRATCH3
+03B     get_num_lcd.tecla
+03B     @PRINTF_LU_649.@SCRATCH4
+03C     get_num_lcd.i
+03C     @PRINTF_LU_649.@SCRATCH5
+03D     read_key.c
+03D     get_num_lcd.@SCRATCH1
+03D     @PSTRINGC7_649.@SCRATCH1
+03D     @PRINTF_LU_649.@SCRATCH6
+03E     kbd_getc.kchar
+03E     get_num_lcd.@SCRATCH2
+03E     @PSTRINGC7_649.@SCRATCH2
+03E     @PRINTF_LU_649.@SCRATCH7
+03F     kbd_getc.row
+03F     pow.base
+03F     get_num_lcd.@SCRATCH3
+03F     @PSTRINGC7_649.@SCRATCH3
+040     pow.power
+040     lcd_putc.c
+040     kbd_getc.@SCRATCH1
+040     @PSTRINGC7_649.@SCRATCH4
+041-044 pow.result
+041     lcd_gotoxy.x
+041     @delay_ms1.P1
+042     lcd_gotoxy.y
+043     lcd_gotoxy.address
+044     lcd_gotoxy.@SCRATCH1
+045     lcd_send_byte.address
+045     pow.i
+046-049 @MUL3232.P1
+046     lcd_send_byte.n
+047     lcd_read_byte.low
+047     lcd_send_byte.@SCRATCH1
+048     lcd_read_byte.high
+048     lcd_send_nibble.n
+049     lcd_read_byte.@SCRATCH1
+04A-04D @MUL3232.P1
+04E     @MUL3232.@SCRATCH1
+04F     @MUL3232.@SCRATCH2
+050     @MUL3232.@SCRATCH3
+051     @MUL3232.@SCRATCH4
+052     @MUL3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+087     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  LCD_INIT_STRING.call
+000008  LCD_INIT_STRING.data
+00000C  KEYS.call
+000010  KEYS.data
+000020  @const688.call
+000023  @const709.call
+00002B  @const710.call
+000031  @const713.call
+00003B  @const714.call
+000041  @const717.call
+000049  @const718.call
+00004F  @const724.call
+000054  @const726.call
+00005D  @const730.call
+000066  @const734.call
+00006F  @const738.call
+000078  @const740.call
+000080  @const741.call
+000089  @const753.call
+000098  @delay_ms1
+0000AC  lcd_send_nibble
+0000BD  lcd_read_nibble
+0000C3  lcd_send_byte
+0000C4  lcd_read_byte
+000100  lcd_init
+000130  kbd_init
+000133  paro
+00013C  lcd_gotoxy
+00014E  lcd_putc
+000172  @PSTRINGC7_649
+0001C8  kbd_getc
+000231  @goto10645
+000239  read_key
+000242  @MUL3232
+00026C  get_num_lcd
+0002EB  pow
+00033B  PreguntarDato
+00037E  girarHorario
+000387  @PSTRINGCN7_649
+0003DE  @PRINTF_LU_649
+000441  delay_paro
+00044C  @MUL1616
+000473  @DIV1616
+0004E6  paro_emergencia
+00051A  girarAntihorario
+000523  rutina_105
+00055F  rutina_210
+000589  PreguntarSegundos
+0005BA  rutina_315
+0005F0  PreguntarIteraciones
+000623  rutina_420
+000659  MAIN
+000659  @cinit1
+000668  @cinit2
+
+Project Directory:
+    C:\Users\luist\OneDrive\Escritorio\8VO\MICRO\PROGRAMAS\PRACTICA3\
+
+Project Files:
+    PRACTICA3.c                                             [06-mar.-23 10:42  CRC=2E824CD4]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877a.h [18-abr.-14 16:56  CRC=4F277C97]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd_c.c [21-feb.-23 10:21  CRC=B171009B]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\kbd4x4_b.c [22-feb.-23 10:13  CRC=DEF67D8A]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\getNum16.c [22-feb.-23 10:42  CRC=EEBE17EA]
+
+Source signature=EB8D7764
+
+Units:
+    PRACTICA3 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   PRACTICA3.xsym
+    Errors:      PRACTICA3.err
+    Ext Symbols: PRACTICA3.esym
+    INHX8:       PRACTICA3.hex
+    Symbols:     PRACTICA3.sym
+    List:        PRACTICA3.lst
+    Debug/COFF:  PRACTICA3.cof
+    Project:     PRACTICA3.ccspjt
+    Call Tree:   PRACTICA3.tre
+    Statistics:  PRACTICA3.STA

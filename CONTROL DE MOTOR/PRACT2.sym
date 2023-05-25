@@ -1,0 +1,196 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+006     kbd
+007     lcdlat
+007     lcd
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @TRIS_C
+021     kbd_getc.kbd_call_count
+022.0   kbd_getc.kbd_down
+023     kbd_getc.last_key
+024     kbd_getc.col
+025-026 SEG
+027-028 MS
+029-02A NM
+02B-02C contador
+02D-02E DS
+02F-030 DS2
+031-032 DS3
+033.0   MAIN.condicion
+034     motor3.SEG
+034     get_num_lcd.x
+034     lcd_init.i
+034-035 @MUL1616.P1
+034     motor1.SEG
+034     @PSTRINGCN7_650.P1
+034     motor2.SEG
+034     MAIN.@SCRATCH1
+035-036 motor2.i
+035-036 motor3.i
+035     get_num_lcd.y
+035-036 motor1.i
+035     lcd_init.@SCRATCH1
+035     MAIN.@SCRATCH2
+035     @PSTRINGCN7_650.@SCRATCH1
+036-037 get_num_lcd.numero
+036-037 @MUL1616.P1
+036     @PSTRINGCN7_650.@SCRATCH2
+037-038 @PRINTF_LU_650.P1
+037-038 @DIV1616.P2
+037     paro_emergencia.tecla
+037     motor1.@SCRATCH1
+037     motor2.@SCRATCH1
+037     motor3.@SCRATCH1
+037     @PSTRINGCN7_650.@SCRATCH3
+038-03C get_num_lcd.cadena
+038     paro_emergencia.@SCRATCH1
+038     motor1.@SCRATCH2
+038     motor2.@SCRATCH2
+038     motor3.@SCRATCH2
+038     @MUL1616.@SCRATCH1
+038     @PSTRINGCN7_650.@SCRATCH4
+039-03A @DIV1616.P1
+039     @PRINTF_LU_650.@SCRATCH1
+03A     @PRINTF_LU_650.@SCRATCH2
+03B     @PRINTF_LU_650.@SCRATCH3
+03B     @DIV1616.@SCRATCH1
+03C     @PRINTF_LU_650.@SCRATCH4
+03D     get_num_lcd.index
+03D     @PRINTF_LU_650.@SCRATCH5
+03E     get_num_lcd.tecla
+03E     @PRINTF_LU_650.@SCRATCH6
+03F     get_num_lcd.i
+03F     @PRINTF_LU_650.@SCRATCH7
+040     read_key.c
+040     get_num_lcd.@SCRATCH1
+040     @PSTRINGC7_650.@SCRATCH1
+041     kbd_getc.kchar
+041     get_num_lcd.@SCRATCH2
+041     @PSTRINGC7_650.@SCRATCH2
+042     kbd_getc.row
+042     pow.base
+042     get_num_lcd.@SCRATCH3
+042     @PSTRINGC7_650.@SCRATCH3
+043     lcd_putc.c
+043     pow.power
+043     kbd_getc.@SCRATCH1
+043     @PSTRINGC7_650.@SCRATCH4
+044     lcd_gotoxy.x
+044-047 pow.result
+044     @delay_ms1.P1
+045     lcd_gotoxy.y
+046     lcd_gotoxy.address
+047     lcd_gotoxy.@SCRATCH1
+048     lcd_send_byte.address
+048     pow.i
+049-04C @MUL3232.P1
+049     lcd_send_byte.n
+04A     lcd_read_byte.low
+04A     lcd_send_byte.@SCRATCH1
+04B     lcd_send_nibble.n
+04B     lcd_read_byte.high
+04C     lcd_read_byte.@SCRATCH1
+04D-050 @MUL3232.P1
+051     @MUL3232.@SCRATCH1
+052     @MUL3232.@SCRATCH2
+053     @MUL3232.@SCRATCH3
+054     @MUL3232.@SCRATCH4
+055     @MUL3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+087     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  LCD_INIT_STRING.call
+000008  LCD_INIT_STRING.data
+00000C  KEYS.call
+000010  KEYS.data
+000020  @const689.call
+000023  @const708.call
+00002C  @const709.call
+000035  @const710.call
+000045  @const713.call
+00004D  @const723.call
+000055  @const728.call
+00005D  @const735.call
+000066  @const736.call
+00006F  @const737.call
+000078  @const738.call
+00007C  @const739.call
+000085  @const743.call
+000090  @delay_ms1
+0000A4  lcd_send_nibble
+0000B5  lcd_read_nibble
+0000BB  lcd_send_byte
+0000BC  lcd_read_byte
+0000F8  lcd_init
+000128  kbd_init
+00012B  lcd_gotoxy
+00013D  lcd_putc
+000161  @PSTRINGC7_650
+0001B7  kbd_getc
+000220  @goto10645
+000228  read_key
+000231  @MUL3232
+00025B  get_num_lcd
+0002DA  pow
+00032A  @MUL1616
+00033F  @PSTRINGCN7_650
+000396  @PRINTF_LU_650
+0003F9  paro_emergencia
+000436  @DIV1616
+00045B  motor1
+0004B4  motor2
+000542  motor3
+0005AB  MAIN
+0005AB  @cinit1
+0005B9  @cinit2
+
+Project Directory:
+    C:\Users\luist\OneDrive\Escritorio\8VO\MICRO\PROGRAMAS\CONTROL DE MOTOR\
+
+Project Files:
+    PRACT2.c                                                [27-feb.-23 14:03  CRC=FD245042]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877a.h [18-abr.-14 16:56  CRC=4F277C97]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd_c.c [21-feb.-23 10:21  CRC=B171009B]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\kbd4x4_b.c [22-feb.-23 10:13  CRC=DEF67D8A]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\getNum16.c [22-feb.-23 10:42  CRC=EEBE17EA]
+
+Source signature=BA2F7AD2
+
+Units:
+    PRACT2 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   PRACT2.xsym
+    Errors:      PRACT2.err
+    Ext Symbols: PRACT2.esym
+    INHX8:       PRACT2.hex
+    Symbols:     PRACT2.sym
+    List:        PRACT2.lst
+    Debug/COFF:  PRACT2.cof
+    Project:     PRACT2.ccspjt
+    Call Tree:   PRACT2.tre
+    Statistics:  PRACT2.STA
